@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #002339;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+}
+
+/* Fade-in effect */
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animated "Random Password" Text */
+.Password-text {
+    color: #019f55;
+    border-bottom: 4px solid #019f55;
+    padding-bottom: 7px;
+    display: inline-block;
+    animation: bounce 1.5s infinite alternate, colorChange 3s infinite alternate;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes colorChange {
+    0% { color: #019f55; }
+    50% { color: #ffcc00; }
+    100% { color: #ff5733; }
+}
+
+.display {
+    width: 100%;
+    margin: 50px 0 100px;
+    background: #fff;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 20px;
+    border-radius: 5px;
+}
+
+.display input {
+    border: 0;
+    outline: 0;
+    font-size: 24px;
+    flex-grow: 1;
+    background: transparent;
+    color: #333;
+}
+
+/* Funny Placeholder Text */
+.display input::placeholder {
+    color: #666;
+    font-style: italic;
+    font-size: 16px;
+}
+
+/* Shake Effect on Button Click */
+button.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+button {
+    border: 0;
+    outline: 0;
+    background: #019f55;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #017a43;
+}
+
+button img {
+    width: 28px;
+    margin-right: 10px;
+}
